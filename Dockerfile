@@ -12,7 +12,7 @@ RUN apt-get update && \
 ENV LD_LIBRARY_PATH /usr/local/lib:${LD_LIBRARY_PATH}
 
 # Install from requirements.txt file
-COPY requirements.txt /tmp/
-RUN pip install --requirement /tmp/requirements.txt && \
-    fix-permissions $CONDA_DIR && \
-    fix-permissions /home/$NB_USER
+# COPY requirements.txt /tmp/
+# RUN pip install --requirement /tmp/requirements.txt && \
+#    fix-permissions $CONDA_DIR && \
+#    fix-permissions /home/$NB_USER
