@@ -1,6 +1,9 @@
 # Start from a core stack version
 FROM jupyter/datascience-notebook:9f9e5ca8fe5a
 
+# Switch to root user
+USER root
+
 # Install glpk (glpsol):
 RUN apt-get update && \
     apt-get install -y --no-install-recommends glpk-utils
