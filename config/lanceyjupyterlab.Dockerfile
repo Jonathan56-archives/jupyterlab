@@ -21,4 +21,4 @@ COPY config/requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
 
 # Start script
-CMD cd ${MAIN_PATH} && sh config/run_jupyter.sh
+CMD cd ${MAIN_PATH} && sh jupyterlab/config/run_jupyter.sh
