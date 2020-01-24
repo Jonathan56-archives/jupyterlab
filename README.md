@@ -1,17 +1,20 @@
-# jupyterlab
-Deploy a jupyter lab on the server.
 
-```console
-foo@bar:~$ docker build --rm -t jupyterlab/my-notebook .
+# JupyterLab-Configuration
 
-foo@bar:~$ docker run --detach  --rm -p 10080:8888 -e JUPYTER_ENABLE_LAB=yes \
--e NB_UID=1000  -e GRANT_SUDO=yes --user root \
--v "$PWD":/home/jovyan/work jupyterlab/my-notebook
+The [JupyterLab-Configurator](https://www.lean-data-science.com) lets you easily create your **JupyterLab configuration** that runs JupyterLab in a **container** and automates the whole setup using **scripts**. A container is a separated environment that encapsulates the libraries you install in it without affecting your host computer. Scripts automate executing all the commands you would normally need to run manually. For you can review and edit scripts, you get full control of your configuration at any time.
 
-foo@bar:~$ docker logs --tail 20 cd612d2
-```
+**Create** your JupyterLab configuration:
 
-Once launched, for plotly to work:
-```console
-pip install jupyterlab==1.2 "ipywidgets==7.5"
-```
+1. Create your configuration with a few clicks with the [**JupyterLab-Configurator**](https://www.lean-data-science.com)
+1. Download and unzip your configuration
+1. Customize it to your needs (optional)
+
+The following picture shows the JupyterLab configuration in action. **Use** it with two simple steps:
+
+1. Execute `sh {path_to_your_project}/run.sh`
+1. Open `localhost:8888` from a browser
+
+<table class="image">
+<tr><td><img src="config_use.png" width="600"></td></tr>
+<tr><td class="caption" >Using the JupyterLab configuration</td></tr>
+</table>
