@@ -6,7 +6,7 @@ mkdir .jupyter
 # copy the jupyter configuration into home-directory
 cp -r ${CONFIG_PATH}/jupyter_notebook_config.py ~/.jupyter/
 
-cd ${MAIN_PATH}
+cd /usr/local/bin/lanceyjupyterlab/
 
 
 # edit the python3 kernel, that already imports os,sys and the paths to the app and test
