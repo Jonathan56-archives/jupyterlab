@@ -1,7 +1,7 @@
 FROM leandatascience/jupyterlab-ds-ml:latest
 
 # Env variables
-ENV MAIN_PATH=/usr/local/bin/lanceyjupyterlab
+ENV MAIN_PATH=/usr/local/bin/lanceyjupyterlab/jupyterlab
 ENV LIBS_PATH=${MAIN_PATH}/libs
 ENV CONFIG_PATH=${MAIN_PATH}/config
 ENV NOTEBOOK_PATH=${MAIN_PATH}/notebooks
@@ -21,4 +21,4 @@ COPY config/requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
 
 # Start script
-CMD cd ${MAIN_PATH} && sh jupyterlab/config/run_jupyter.sh
+CMD cd ${MAIN_PATH} && sh config/run_jupyter.sh
