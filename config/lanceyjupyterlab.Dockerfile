@@ -18,9 +18,7 @@ ENV LD_LIBRARY_PATH /usr/local/lib:${LD_LIBRARY_PATH}
 
 # Install from requirements.txt file
 COPY config/requirements.txt /tmp/
-RUN pip install --requirement /tmp/requirements.txt && \
-    fix-permissions $CONDA_DIR && \
-    fix-permissions /home/$NB_USER
+RUN pip install --requirement /tmp/requirements.txt
 
 # Start script
 CMD cd ${MAIN_PATH} && sh config/run_jupyter.sh
