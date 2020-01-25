@@ -20,5 +20,8 @@ ENV LD_LIBRARY_PATH /usr/local/lib:${LD_LIBRARY_PATH}
 COPY config/requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
 
+# Install node and npm to add jupyterlab extension
+RUN curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n && bash n lts
+
 # Start script
 CMD cd ${MAIN_PATH} && sh config/run_jupyter.sh
